@@ -1,0 +1,27 @@
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sticky-filter {
+    right: 0px;
+    position: fixed;
+    z-index: 999999;
+    background-color: #d3d3d3;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+  }
+  .infinite-scroll-component{
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    top: 203px;
+    z-index: 10;
+  }
+
+  .year-center {
+    text-align: center;
+  }
+  

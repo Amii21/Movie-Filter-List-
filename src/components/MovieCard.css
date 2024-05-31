@@ -1,0 +1,76 @@
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-info {
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  .movie-info h3 {
+    margin: 0 0 10px;
+  }
+
+  .App {
+    text-align: center;
+    margin: auto;
+}
+ 
+.container {
+    text-align: center;
+    margin: auto;
+    /* justify-content: space-evenly; */
+    max-width: 30rem;
+}
+ 
+.geeks {
+    color: green;
+}
+ 
+.text {
+    display: inline;
+    width: 90%;
+}
+ 
+.read-or-hide {
+    color: rgb(192, 192, 192);
+    cursor: pointer;
+}
+.text-line-clamp {
+    display: -webkit-box;
+    pointer-events: none;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.fsize14 {
+    font-size: 14px;
+}
+.text989898 {
+    /* color: #989898; */
+    color: #4c4141
+}
+.line-h22px {
+    line-height: 22px;
+}
+.text-justify{
+    text-align: justify;
+}
+  
+.text-title{
+    color: #3b3b3b;
+}
+.text-left{
+    text-align: left;
+}
