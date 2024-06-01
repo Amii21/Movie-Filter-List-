@@ -5,6 +5,7 @@ const BASE_URL = "https://api.themoviedb.org/3";
 
 export const fetchMovies = async (year, selectedGenres) => {
   const genreString = selectedGenres.join(",");
+  // console.log("YEARSSSS", year);
   const response = await axios.get(`${BASE_URL}/discover/movie`, {
     params: {
       api_key: API_KEY,
@@ -19,8 +20,8 @@ export const fetchMovies = async (year, selectedGenres) => {
     genre_names: movie.genre_ids.map(
       (id) => selectedGenres.find((genre) => genre.id === id)?.name || "Unknown"
     ),
-    cast: [], // Fetch cast data if needed
-    director: "", // Fetch director data if needed
+    cast: [], // Fetching cast data if needed
+    director: "", // Fetching director data if needed
   }));
 };
 

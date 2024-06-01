@@ -15,7 +15,7 @@ const GenreFilter = ({ onFilterChange }) => {
   }, []);
 
   const handleGenreClick = (genreId) => {
-    console.log("HHHH", genreId);
+    // console.log("HHHH", genreId);
     setSelectedGenres((prevSelected) =>
       prevSelected.includes(genreId)
         ? prevSelected.filter((id) => id !== genreId)
@@ -29,7 +29,7 @@ const GenreFilter = ({ onFilterChange }) => {
 
   return (
     <div className="tabs">
-      <div className="tab-buttons">
+      <div className="tab-buttons relative">
         {genres.map((genre) => (
           <button
             key={genre.id}

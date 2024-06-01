@@ -1,4 +1,3 @@
-// src/components/MovieList.js
 import React, { useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import MovieCard from "./MovieCard";
@@ -21,31 +20,15 @@ const MovieList = () => {
       setGenres(genreData);
     };
     loadGenres();
-    // loadMoreMoviesFirst(year);
     loadMoreMovies(year);
   }, []);
 
   const loadMoreMovies = async (year) => {
     // debugger;
-    console.log("YEARS", year);
+    // console.log("YEARS", year);
     const newMovies = await fetchMovies(year, selectedGenres);
-    console.log("NEW", newMovies);
+    // console.log("NEW", newMovies);
     setMovies((prevMovies) => [...prevMovies, ...newMovies]);
-    // setMovies(newMovies);
-    setYear((prevYear) => prevYear + 1);
-    // if (newMovies.length < 20) {
-    //   setHasMore(false);
-    // }
-    if (newMovies.length === 0) setHasMore(false);
-  };
-
-  const loadMoreMoviesFirst = async (year) => {
-    // debugger;
-    console.log("YEARS", year);
-    const newMovies = await fetchMovies(year, selectedGenres);
-    console.log("NEW", newMovies);
-    // setMovies((prevMovies) => [...prevMovies, ...newMovies]);
-    setMovies(newMovies);
     setYear((prevYear) => prevYear + 1);
     if (newMovies.length === 0) setHasMore(false);
   };
@@ -61,11 +44,11 @@ const MovieList = () => {
   const searchBarSetMovies = (movies) => {
     setMovies(movies);
   };
-  console.log(movies, "5000");
+  // console.log(movies, "5000");
   return (
     <div>
       <div className="sticky-filter">
-        <h1>Movie Filter App</h1>
+        <h1>Movie List App</h1>
         <div>
           <GenreFilter
             className="filter-data"
@@ -77,13 +60,11 @@ const MovieList = () => {
       </div>
       <InfiniteScroll
         dataLength={movies.length}
-        next={() => loadMoreMovies(year)}
+        next={() => loadMoreMovies(year - 1)}
         hasMore={hasMore}
         loader={<h4>Loading...</h4>}
       >
-        {/* <h1 className="year-center">{year}</h1> */}
         <div className="movie-list">
-          {/* <SearchBar /> */}
           {movies.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))}

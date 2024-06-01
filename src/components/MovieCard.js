@@ -1,5 +1,4 @@
-// src/components/MovieCard.js
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./MovieCard.css";
 
 const ReadMore = ({ children }) => {
@@ -24,11 +23,8 @@ const ReadMore = ({ children }) => {
 };
 
 const MovieCard = ({ movie }) => {
-  useEffect(() => {
-    console.log(movie, "28");
-  });
   return (
-    <div className="movie-card">
+    <div className="movie-card card-shadow">
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
@@ -36,7 +32,7 @@ const MovieCard = ({ movie }) => {
       <div className="movie-info">
         <h3 className="text-title">{movie.title}</h3>
         <p className="text989898 text-left">
-          <strong className="text-title">Genre:</strong>{" "}
+          <strong className="text-title">Genres:</strong>{" "}
           {movie.genre_ids.join(", ")}
         </p>
         <p className="text989898 text-left">

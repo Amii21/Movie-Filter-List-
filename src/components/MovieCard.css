@@ -4,8 +4,9 @@
     margin: 10px;
     width: 300px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 8px; 
     overflow: hidden;
+    cursor: pointer;
   }
   
   .movie-card img {
@@ -30,7 +31,6 @@
 .container {
     text-align: center;
     margin: auto;
-    /* justify-content: space-evenly; */
     max-width: 30rem;
 }
  
@@ -73,4 +73,28 @@
 }
 .text-left{
     text-align: left;
+}
+
+.search-fixed {
+    position: absolute;
+    bottom: 20px;
+    right: 41px;
+}
+
+.card-shadow:hover {
+    /* box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); */
+    /* box-shadow: 10px 10px lightblue; */
+    /* width: 250px; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center; */
+  box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);
+}
+
+.search-height {
+    padding: 6px;
+    cursor: pointer;
+}
+
+.search-height-fix {
+    height: 26px;
 }
